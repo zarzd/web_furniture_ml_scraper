@@ -71,6 +71,6 @@ def product_detection_model(url):
         doc = nlp(text)
         for ent in doc.ents:
             if ent.label_ == 'PRODUCT':
-                detected_products.append(ent.text)
+                detected_products.append(ent.text.lower())
 
     return list(set(detected_products))
