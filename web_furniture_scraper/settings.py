@@ -114,6 +114,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'main', 'static'),  # Путь к вашим статическим файлам
+]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Укажите директорию для собранных статических файлов
 
 # Default primary key field type
